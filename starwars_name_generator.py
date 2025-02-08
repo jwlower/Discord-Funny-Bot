@@ -1,9 +1,10 @@
 # bot.py
 import os
 import discord
+import json
+import random
 from dotenv import load_dotenv
 import re
-import random
 
 # Set up intents
 intents = discord.Intents.default()
@@ -16,10 +17,28 @@ TOKEN = os.getenv('DISCORD_TOKEN_INSPIRATION_BOT')
 # Create the client with the specified intents
 client = discord.Client(intents=intents)
 
-# List of greetings to look for
-bot_call = ["!inspirationbot", "!inspiration_bot", "!insp", "!inspiration", "!inspbot", "!inspb"]
+# List of bot activation phrases
+bot_call = ["!starwarsname", "!swname", "!starwars_name"]
 
-additions = []
+# Load Star Wars names JSON
+try:
+    with open("starwars_names.json", "r") as file:
+        starwars_names = json.load(file)
+except FileNotFoundError:
+    starwars_names = {}
+
+def generate_starwars_name(category="jedi"):
+    """Generate a random Star Wars name from a given category."""
+    if category not in starwars_names:
+        return "Unknown category. Try: Jedi, Sith, Scoundrel, Alien, Droid."
+
+    standard = starwars_names[category].get("standard", [])
+    extension = starwars_names[category].get("extension", [])
+
+    if not standard or not extension:
+        return "Not enough name components available."
+
+    return random.choice(standard) + random.choice(extension)
 
 @client.event
 async def on_ready():
@@ -31,64 +50,16 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    # Read random addition from the file
-    try:
-        with open("inspirations.txt", "r") as file:
-            additions = file.readlines()
-            
-        # Pick a random addition
-        if additions:
-            addition = random.choice(additions).strip()
-        else:
-            addition = "inspired beyond words."  # Default if the file is empty
-    except FileNotFoundError:
-        addition = "inspired beyond words."  # Default if the file doesn't exist
-    
-    if "getinsp" in message.content.lower():
-        guild = message.guild
-        
-        # Get all channel names and filter those containing "inspiration" (case-insensitive)
-        matching_channels = [
-            channel for channel in guild.channels
-            if re.search(r'\binspiration\b', re.sub(r'[^a-zA-Z0-9\s]', '', channel.name), re.IGNORECASE)
-        ]
+    content_lower = message.content.lower()
 
-        post_channel = matching_channels[0]
-        
-        if matching_channels:
-            channel_names = ", ".join([channel.name for channel in matching_channels])
-            await message.channel.send(f"Found channels containing 'inspiration': {channel_names}")
-        else:
-            await message.channel.send("No channels containing 'inspiration' were found.")
+    # Check if the message contains a bot call
+    if any(call in content_lower for call in bot_call):
+        # Extract category if provided (e.g., "!starwarsname sith")
+        parts = message.content.split()
+        category = parts[1].lower() if len(parts) > 1 else "jedi"
 
-    # Check if the message contains a greeting
-    if any(greet in message.content.lower() for greet in bot_call):
-        if message.reference:
-            # Fetch the replied-to message
-            replied_message = await message.channel.fetch_message(message.reference.message_id)
-            # Check if the replied message's author is the bot
-            if replied_message.author != client.user:
-                guild = message.guild
-        
-                # Get all channel names and filter those containing "inspiration" (case-insensitive)
-                matching_channels = [
-                    channel for channel in guild.channels
-                    if re.search(r'\binspiration-bot\b', re.sub(r'[^a-zA-Z0-9\s]', '', channel.name), re.IGNORECASE)
-                ]
-                replied_content = replied_message.content
-                if len(matching_channels) > 0:
-                    # Pick first channel
-                    post_channel = matching_channels[0]
-                    await post_channel.send(f'"{replied_content}"\n\n-- {replied_message.author.name} {addition}')
-                else:
-                    
-                    await message.channel.send(f'"{replied_content}"\n\n-- {replied_message.author.name} {addition}')
-        
-        
-        else:
-            await message.channel.send("You have called Inspiration Bot.")
-
-    
+        starwars_name = generate_starwars_name(category)
+        await message.channel.send(f"Your {category.capitalize()} name: {starwars_name}")
 
 # Run the bot
 client.run(TOKEN)
