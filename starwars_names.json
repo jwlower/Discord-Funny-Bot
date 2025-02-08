@@ -1,7 +1,7 @@
 {
   "jedi_names": {
     "syllable": [ "qui", "sha", "obi", "aay", "ki", "plo", "cor", "el", "wan", "gon", "ti", "secu", "ra", "dral", "koon", "diah", "vash" ],
-    "special": [ "Peter Griffin" ]
+    "special": [ "Peter Griffin", "Hawk Tuah" ]
   },
   "sith_names": {
     "syllable": [ "sid", "mal", "nih", "tyr", "plag", "rev", "kre", "sca", "ius", "us", "is", "ous", "ox", "an", "dar", "vek" ],
@@ -16,7 +16,9 @@
     "special": [ "Barf" ]
   },
   "droid_names": {
-    "syllable": [ "r", "ig", "bb", "hk", "lom", "t", "ev", "2", "88", "8", "47", "4", "m4", "9d9" ],
+    "syllable": [ "r", "r1","r2","r3","r4","r5","r6","r7","r8","ig", "bb", "hk", "t", "ev", "c", "aq", "av",
+      "bd", "bt", "d", "dum", "dt", "eg", "g", "gl", "gs", "h", "i", "j", "k", "kt", "l", "lm", "m",
+      "o", "p", "plnk", "qt", "sd", "st", "tx", "u", "v", "x","47", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" ],
     "special": [ "D0-0D", "800815" ]
   }
 }
