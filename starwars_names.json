@@ -1,22 +1,22 @@
 {
-  "Jedi_Names": {
-    "Prefixes": [ "Qui-", "Sha-", "Obi-", "Aay-", "Ki-", "Plo-", "Cor-", "El-" ],
-    "Suffixes": [ "-Wan", "-Gon", "-Ti", "-Secura", "-Dral", "-Koon", "-Diah", "-Vash" ]
+  "jedi_names": {
+    "standard": [ "qui", "sha", "obi", "aay", "ki", "plo", "cor", "el" ],
+    "extension": [ "wan", "gon", "ti", "secu", "ra", "dral", "koon", "diah", "vash" ]
   },
-  "Sith_Names": {
-    "Prefixes": [ "Sid-", "Mal-", "Nih-", "Tyr-", "Plag-", "Rev-", "Kre-", "Sca-" ],
-    "Suffixes": [ "-ius", "-us", "-is", "-ous", "-ox", "-an", "-dar", "-vek" ]
+  "sith_names": {
+    "standard": [ "sid", "mal", "nih", "tyr", "plag", "rev", "kre", "sca" ],
+    "extension": [ "ius", "us", "is", "ous", "ox", "an", "dar", "vek" ]
   },
-  "Scoundrel_Names": {
-    "Prefixes": [ "Han-", "Lan-", "Gre-", "Cad-", "Dash-", "Bos-", "Jan-", "Tob-" ],
-    "Suffixes": [ "-Solo", "-dar", "-bane", "-ko", "-rendar", "-jax", "-veck", "-ryn" ]
+  "scoundrel_names": {
+    "standard": [ "han", "lan", "gre", "cad", "dash", "bos", "jan", "tob" ],
+    "extension": [ "so", "lo", "dar", "bane", "ko", "ren", "dar", "jax", "veck", "ryn" ]
   },
-  "Alien_Names": {
-    "Prefixes": [ "Jab-", "Wat-", "Nien-", "Plo-", "Tar-", "Sal-", "Bib-", "Zor-" ],
-    "Suffixes": [ "-ba", "-do", "-Nunb", "-koon", "-lee", "-jenn", "-vass", "-gulla" ]
+  "alien_names": {
+    "standard": [ "jab", "wat", "nien", "plo", "tar", "sal", "bib", "zor" ],
+    "extension": [ "ba", "do", "nunb", "koon", "lee", "jenn", "vass", "gulla" ]
   },
-  "Droid_Names": {
-    "Formats": [ "Letter-Number", "Letter-Number-Letter", "Two Letters-Number", "Alphanumeric" ],
-    "Examples": [ "R2-D2", "IG-88", "BB-8", "HK-47", "4-LOM", "T3-M4", "EV-9D9" ]
+  "droid_names": {
+    "standard": [ "r", "ig", "bb", "hk", "lom", "t", "ev" ],
+    "extension": [ "2", "88", "8", "47", "4", "m4", "9d9" ]
   }
 }
