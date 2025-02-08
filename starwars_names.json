@@ -1,22 +1,22 @@
 {
   "jedi_names": {
-    "standard": [ "qui", "sha", "obi", "aay", "ki", "plo", "cor", "el" ],
-    "extension": [ "wan", "gon", "ti", "secu", "ra", "dral", "koon", "diah", "vash" ]
+    "syllable": [ "qui", "sha", "obi", "aay", "ki", "plo", "cor", "el" ],
+    "special": [ "wan", "gon", "ti", "secu", "ra", "dral", "koon", "diah", "vash" ]
   },
   "sith_names": {
-    "standard": [ "sid", "mal", "nih", "tyr", "plag", "rev", "kre", "sca" ],
-    "extension": [ "ius", "us", "is", "ous", "ox", "an", "dar", "vek" ]
+    "syllable": [ "sid", "mal", "nih", "tyr", "plag", "rev", "kre", "sca" ],
+    "special": [ "ius", "us", "is", "ous", "ox", "an", "dar", "vek" ]
   },
   "scoundrel_names": {
-    "standard": [ "han", "lan", "gre", "cad", "dash", "bos", "jan", "tob" ],
-    "extension": [ "so", "lo", "dar", "bane", "ko", "ren", "dar", "jax", "veck", "ryn" ]
+    "syllable": [ "han", "lan", "gre", "cad", "dash", "bos", "jan", "tob" ],
+    "special": [ "so", "lo", "dar", "bane", "ko", "ren", "dar", "jax", "veck", "ryn" ]
   },
   "alien_names": {
-    "standard": [ "jab", "wat", "nien", "plo", "tar", "sal", "bib", "zor" ],
-    "extension": [ "ba", "do", "nunb", "koon", "lee", "jenn", "vass", "gulla" ]
+    "syllable": [ "jab", "wat", "nien", "plo", "tar", "sal", "bib", "zor" ],
+    "special": [ "ba", "do", "nunb", "koon", "lee", "jenn", "vass", "gulla" ]
   },
   "droid_names": {
-    "standard": [ "r", "ig", "bb", "hk", "lom", "t", "ev" ],
-    "extension": [ "2", "88", "8", "47", "4", "m4", "9d9" ]
+    "syllable": [ "r", "ig", "bb", "hk", "lom", "t", "ev" ],
+    "special": [ "2", "88", "8", "47", "4", "m4", "9d9" ]
   }
 }
