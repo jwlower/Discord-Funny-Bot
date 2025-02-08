@@ -1,22 +1,22 @@
 {
   "jedi_names": {
-    "syllable": [ "qui", "sha", "obi", "aay", "ki", "plo", "cor", "el" ],
-    "special": [ "wan", "gon", "ti", "secu", "ra", "dral", "koon", "diah", "vash" ]
+    "syllable": [ "qui", "sha", "obi", "aay", "ki", "plo", "cor", "el", "wan", "gon", "ti", "secu", "ra", "dral", "koon", "diah", "vash" ],
+    "special": [ "Peter Griffin" ]
   },
   "sith_names": {
-    "syllable": [ "sid", "mal", "nih", "tyr", "plag", "rev", "kre", "sca" ],
-    "special": [ "ius", "us", "is", "ous", "ox", "an", "dar", "vek" ]
+    "syllable": [ "sid", "mal", "nih", "tyr", "plag", "rev", "kre", "sca", "ius", "us", "is", "ous", "ox", "an", "dar", "vek" ],
+    "special": [ "Baahd'Gai" ]
   },
   "scoundrel_names": {
-    "syllable": [ "han", "lan", "gre", "cad", "dash", "bos", "jan", "tob" ],
-    "special": [ "so", "lo", "dar", "bane", "ko", "ren", "dar", "jax", "veck", "ryn" ]
+    "syllable": [ "han", "lan", "gre", "cad", "dash", "bos", "jan", "tob", "so", "lo", "dar", "bane", "ko", "ren", "dar", "jax", "veck", "ryn" ],
+    "special": [ "Take-yo Sheeht" ]
   },
   "alien_names": {
-    "syllable": [ "jab", "wat", "nien", "plo", "tar", "sal", "bib", "zor" ],
-    "special": [ "ba", "do", "nunb", "koon", "lee", "jenn", "vass", "gulla" ]
+    "syllable": [ "jab", "wat", "nien", "plo", "tar", "sal", "bib", "zor", "ba", "do", "nunb", "koon", "lee", "jenn", "vass", "gulla" ],
+    "special": [ "Barf" ]
   },
   "droid_names": {
-    "syllable": [ "r", "ig", "bb", "hk", "lom", "t", "ev" ],
-    "special": [ "2", "88", "8", "47", "4", "m4", "9d9" ]
+    "syllable": [ "r", "ig", "bb", "hk", "lom", "t", "ev", "2", "88", "8", "47", "4", "m4", "9d9" ],
+    "special": [ "D0-0D", "800815" ]
   }
 }
