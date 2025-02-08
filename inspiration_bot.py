@@ -73,7 +73,7 @@ async def on_message(message):
                 # Get all channel names and filter those containing "inspiration" (case-insensitive)
                 matching_channels = [
                     channel for channel in guild.channels
-                    if re.search(r'\binspiration\b', re.sub(r'[^a-zA-Z0-9\s]', '', channel.name), re.IGNORECASE)
+                    if re.search(r'\binspiration-bot\b', re.sub(r'[^a-zA-Z0-9\s]', '', channel.name), re.IGNORECASE)
                 ]
                 replied_content = replied_message.content
                 if len(matching_channels) > 0:
